@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Personal Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #e0f7fa;
+                margin: 50px;
+            }
+            .container {
+                background-color: white;
+                width: 50%;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+            }
+            h1 {
+                text-align: center;
+                color: #006064;
+                border-bottom: 2px solid #006064;
+                padding-bottom: 10px;
+            }
+            .form-row {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            input[type="text"], input[type="email"], textarea {
+                width: 95%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .btn-submit {
+                background-color: #00838f;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 16px;
+            }
+            .btn-submit:hover {
+                background-color: #006064;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Student Registration</h1>
+            
+            <form action="ProfileServlet" method="POST">
+                
+                <div class="form-row">
+                    <label>Name:</label>
+                    <input type="text" name="fullname" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Student ID:</label>
+                    <input type="text" name="studentid" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Program:</label>
+                    <input type="text" name="program" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="form-row">
+                    <label>Hobbies:</label>
+                    <input type="text" name="hobbies">
+                </div>
+
+                <div class="form-row">
+                    <label>Self Introduction:</label>
+                    <textarea name="intro" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Profile</button>
+                
+            </form>
+            <br>
+            <div style="text-align: center;">
+                <a href="viewProfiles.jsp">View All Profiles (Admin)</a>
+            </div>
+        </div>
+    </body>
+</html>
